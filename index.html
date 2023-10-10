@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Story Smash
+    </title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+
+      <div>
+        <h3>Questions</h3>
+        <label for="questions"></label>
+        <ul>
+          <li v-for="(question, index) in questions">
+            {{question}}
+            <input type="text" id="questions" v-model="enteredValue"/>
+            <button @click="addAnswers()">Submit</button>
+          </li>
+        </ul>
+      </div>
+
+
+      <div>
+        <h3>Answers</h3>
+        <ul>
+          <li v-for="answer in answers">{{ answer }}</li>
+        </ul>
+      </div>
+
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
